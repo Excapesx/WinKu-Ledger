@@ -1,0 +1,26 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const root=path.dirname(new URL(import.meta.url).pathname.replace(/^\/(\w:)/,'$1'));
+const source=process.argv[2]||path.join(root,'reference/小账本-手机版.html');
+let h=fs.readFileSync(source,'utf8');
+h=h.replace('</head>','<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\' \'unsafe-inline\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' data: blob:; connect-src \'none\'; object-src \'none\'; frame-src \'none\'; base-uri \'none\'">\n<link rel="stylesheet" href="winku.css">\n</head>');
+h=h.replace(/<title>.*?<\/title>/,'<title>WinKu 小账本</title>');
+h=h.replace('data-theme="dark"','data-theme="light"');
+h=h.replace('<div class="brand-mark">账</div>','<div class="brand-mark"><svg viewBox="0 0 108 108" aria-hidden="true"><path d="M31 37 42 71 54 49 66 71 77 37"/></svg></div>');
+h=h.replace('<strong>小账本</strong><span>个人记账工作台</span>','<strong>WinKu 小账本</strong><span>自动记录，安心生活</span>');
+h=h.replace(/<nav class="nav" id="nav"[\s\S]*?<\/nav>/,`<nav class="nav" id="nav" aria-label="主导航">${[['dashboard','i-grid','总览'],['transactions','i-list','明细'],['automation','i-spark','自动记账'],['reports','i-chart','报表'],['settings','i-settings','更多']].map(([v,i,l])=>`<button class="nav-item" data-view="${v}"><svg class="ic"><use href="#${i}"/></svg><span>${l}</span></button>`).join('')}</nav>`);
+h=h.replace('数据只保存在这台设备的浏览器里','账目保存在本机，不上传服务器');
+h=h.replace("var raw = localStorage.getItem(STORE_KEY);","var raw = LedgerNative.getData();");
+h=h.replace(/function parseAmount\(raw\) \{[\s\S]*?\n\}\nfunction pct/,'function parseAmount(raw) { return safeParseAmount(raw); }\nfunction pct');
+h=h.replace(/function save\(\) \{[\s\S]*?\n\}\nfunction defaultCategories/,`function save() { return nativeSave(); }\nfunction defaultCategories`);
+h=h.replace(/function download\(name, content, mime\) \{[\s\S]*?\n\}\nfunction csvCell/,`function download(name, content, mime) { LedgerNative.exportFile(name, content, mime || 'text/plain;charset=utf-8'); }\nfunction csvCell`);
+h=h.replace("toast('已导出 ' + D().txns.length + ' 笔流水');","toast('请选择流水文件保存位置');");
+h=h.replace("toast('备份已下载，建议存到网盘或 U 盘');","toast('请选择备份文件保存位置');");
+h=h.replace('/* ---------- 启动 ---------- */','</script>\n<script src="money.js"></script>\n<script src="native.js"></script>\n<script>\n/* ---------- 启动 ---------- */');
+h=h.replace(/浏览器本地存储/g,'本机数据库').replace(/只保存在当前浏览器/g,'只保存在本机').replace(/浏览器数据/g,'应用数据');
+h=h.replace("'· 所有数据保存在当前浏览器的 localStorage（' + esc(location.protocol === 'file:' ? '本地文件模式' : location.host || '本机') + '），不会上传任何服务器，也不需要账号。<br>'", "'· 所有账目保存在本机数据库，不上传服务器，无需登录。<br>'");
+h=h.replace('· 换浏览器、清缓存或使用无痕模式会导致数据不可见，重要数据请定期用「完整备份」导出 JSON。','· 卸载或清除应用数据会删除账本，请定期用「完整备份」导出 JSON。');
+// Prevent browser demo controls being mistaken for real bookkeeping data.
+h=h.replace(/<button[^>]*data-act="load-demo"[^>]*>[\s\S]*?<\/button>/g,'');
+fs.writeFileSync(path.join(root,'app/src/main/assets/index.html'),h,'utf8');
+console.log(`Prepared ledger UI (${Buffer.byteLength(h)} bytes)`);

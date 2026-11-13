@@ -1,0 +1,63 @@
+Applications Memory Usage (in Kilobytes):
+Uptime: 511077 Realtime: 511077
+
+** MEMINFO in pid 3550 [app.winku.ledger:collector] **
+                   Pss  Private  Private     Swap      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap     2018     1948        0        0     6028    12240     5427     1759
+  Dalvik Heap      666      504        0        0     8432     2244     1683      561
+ Dalvik Other      408      388        0        0     1444                           
+        Stack      228      228        0        0      232                           
+       Ashmem       11        0        0        0      580                           
+    Other dev        9        0        8        0      204                           
+     .so mmap      581       96        0        0    24912                           
+    .jar mmap      542        0        0        0    24604                           
+    .apk mmap       17        0        0        0      452                           
+    .dex mmap       71        0       56        0      896                           
+    .oat mmap      218        0        0        0     8548                           
+    .art mmap     1107      468        4        0    31908                           
+   Other mmap       81       36        0        0     1456                           
+      Unknown      371      360        0        0     1404                           
+        TOTAL     6328     4028       68        0   111100    14484     7110     2320
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:      976                          40340
+         Native Heap:     1948                           6028
+                Code:      168                          59428
+               Stack:      228                            232
+            Graphics:        0                              0
+       Private Other:      776
+              System:     2232
+             Unknown:                                    5072
+ 
+           TOTAL PSS:     6328            TOTAL RSS:   111100      TOTAL SWAP (KB):        0
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        5           Activities:        0
+              Assets:        9        AssetManagers:        0
+       Local Binders:        3        Proxy Binders:       29
+       Parcel memory:       12         Parcel count:       14
+    Death Recipients:        0             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+    Other (malloced):      274                             24
+ Other (nonmalloced):       39                             32
+ 
+ SQL
+         MEMORY_USED:      187
+  PAGECACHE_OVERFLOW:       63          MALLOC_SIZE:       46
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b) cache hits cache misses cache size  Dbname
+PER CONNECTION STATS
+         4       40             67    25    30     8  /data/user/0/app.winku.ledger/databases/ledger.db
+         4       40             25    13    16     2  /data/user/0/app.winku.ledger/databases/ledger.db (1)
+POOL STATS
+     cache hits  cache misses    cache size  Dbname
+             38            48            86  /data/user/0/app.winku.ledger/databases/ledger.db

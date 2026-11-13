@@ -1,0 +1,84 @@
+{
+  "device": "Android emulator, API 36",
+  "results": [
+    {
+      "label": "UI process can stop while collector remains",
+      "pass": true,
+      "detail": {
+        "collector": "2746"
+      }
+    },
+    {
+      "label": "notification auto-posts with UI closed",
+      "pass": true
+    },
+    {
+      "label": "same notification update is deduplicated",
+      "pass": true
+    },
+    {
+      "label": "expense auto-posts",
+      "pass": true
+    },
+    {
+      "label": "unaccepted transfer remains pending",
+      "pass": true
+    },
+    {
+      "label": "ordinary chat is not booked",
+      "pass": true
+    },
+    {
+      "label": "collector process is independent",
+      "pass": true
+    },
+    {
+      "label": "emulator reboots",
+      "pass": true
+    },
+    {
+      "label": "collection resumes after reboot without opening ledger",
+      "pass": true
+    },
+    {
+      "label": "automation UI fits phone viewport",
+      "pass": true,
+      "detail": {
+        "connected": false,
+        "height": 772,
+        "navBottom": 772,
+        "overflow": false,
+        "view": "automation"
+      }
+    },
+    {
+      "label": "WinKu dark palette",
+      "pass": true,
+      "detail": "#0E0E10"
+    },
+    {
+      "label": "ledger rows render without horizontal overflow",
+      "pass": true,
+      "detail": {
+        "overflow": false,
+        "rows": 4
+      }
+    },
+    {
+      "label": "large font automation has no page overflow",
+      "pass": true,
+      "detail": {
+        "buttonCount": 26,
+        "overflow": false
+      }
+    },
+    {
+      "label": "inbox review prefills amount and note",
+      "pass": true,
+      "detail": {
+        "amount": "88.00",
+        "note": true
+      }
+    }
+  ]
+}

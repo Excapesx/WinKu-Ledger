@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-13T10:09:24.314Z",
+  "title": "Design System: WinKu 小账本",
+  "extensions": {
+    "colorMeta": {
+      "brand": {
+        "role": "primary",
+        "displayName": "brand"
+      },
+      "action-fill": {
+        "role": "primary",
+        "displayName": "action fill"
+      },
+      "on-accent": {
+        "role": "primary",
+        "displayName": "on accent"
+      },
+      "light-bg": {
+        "role": "neutral",
+        "displayName": "light bg"
+      },
+      "light-bg-soft": {
+        "role": "neutral",
+        "displayName": "light bg soft"
+      },
+      "light-surface": {
+        "role": "neutral",
+        "displayName": "light surface"
+      },
+      "light-surface-2": {
+        "role": "neutral",
+        "displayName": "light surface 2"
+      },
+      "light-surface-3": {
+        "role": "neutral",
+        "displayName": "light surface 3"
+      },
+      "light-line": {
+        "role": "neutral",
+        "displayName": "light line"
+      },
+      "light-line-strong": {
+        "role": "neutral",
+        "displayName": "light line strong"
+      },
+      "light-text": {
+        "role": "neutral",
+        "displayName": "light text"
+      },
+      "light-text-2": {
+        "role": "neutral",
+        "displayName": "light text 2"
+      },
+      "light-muted": {
+        "role": "neutral",
+        "displayName": "light muted"
+      },
+      "light-link": {
+        "role": "primary",
+        "displayName": "light link"
+      },
+      "light-income": {
+        "role": "neutral",
+        "displayName": "light income"
+      },
+      "light-expense": {
+        "role": "neutral",
+        "displayName": "light expense"
+      },
+      "light-warn": {
+        "role": "neutral",
+        "displayName": "light warn"
+      },
+      "dark-bg": {
+        "role": "neutral",
+        "displayName": "dark bg"
+      },
+      "dark-bg-soft": {
+        "role": "neutral",
+        "displayName": "dark bg soft"
+      },
+      "dark-surface": {
+        "role": "neutral",
+        "displayName": "dark surface"
+      },
+      "dark-surface-2": {
+        "role": "neutral",
+        "displayName": "dark surface 2"
+      },
+      "dark-surface-3": {
+        "role": "neutral",
+        "displayName": "dark surface 3"
+      },
+      "dark-line": {
+        "role": "neutral",
+        "displayName": "dark line"
+      },
+      "dark-line-strong": {
+        "role": "neutral",
+        "displayName": "dark line strong"
+      },
+      "dark-text": {
+        "role": "neutral",
+        "displayName": "dark text"
+      },
+      "dark-text-2": {
+        "role": "neutral",
+        "displayName": "dark text 2"
+      },
+      "dark-muted": {
+        "role": "neutral",
+        "displayName": "dark muted"
+      },
+      "dark-link": {
+        "role": "primary",
+        "displayName": "dark link"
+      },
+      "dark-income": {
+        "role": "neutral",
+        "displayName": "dark income"
+      },
+      "dark-expense": {
+        "role": "neutral",
+        "displayName": "dark expense"
+      },
+      "dark-warn": {
+        "role": "neutral",
+        "displayName": "dark warn"
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "headline",
+        "purpose": "Incumbent headline role."
+      },
+      "automation-title": {
+        "displayName": "automation title",
+        "purpose": "Incumbent automation title role."
+      },
+      "amount": {
+        "displayName": "amount",
+        "purpose": "Phone summary values with tabular numerals."
+      },
+      "section": {
+        "displayName": "section",
+        "purpose": "Incumbent section role."
+      },
+      "body": {
+        "displayName": "body",
+        "purpose": "Incumbent body role."
+      },
+      "label": {
+        "displayName": "label",
+        "purpose": "Incumbent label role."
+      },
+      "caption": {
+        "displayName": "caption",
+        "purpose": "Incumbent caption role."
+      },
+      "navigation": {
+        "displayName": "navigation",
+        "purpose": "Incumbent navigation role."
+      }
+    },
+    "shadows": [
+      {
+        "name": "overlay-light",
+        "value": "0 12px 30px rgba(23,23,26,.10)",
+        "purpose": "Modal and toast depth in light theme."
+      },
+      {
+        "name": "overlay-dark",
+        "value": "0 12px 30px rgba(0,0,0,.2)",
+        "purpose": "Modal and toast depth in dark theme."
+      },
+      {
+        "name": "ordinary-surfaces",
+        "value": "none",
+        "purpose": "Flat cards and FAB."
+      }
+    ],
+    "motion": [
+      {
+        "name": "button-transform",
+        "value": ".15s",
+        "purpose": "Small hover raise and active return."
+      },
+      {
+        "name": "control-color",
+        "value": ".18s",
+        "purpose": "Control state color changes."
+      },
+      {
+        "name": "modal-entry",
+        "value": ".22s cubic-bezier(.2,.8,.2,1)",
+        "purpose": "Inherited modal entrance."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "none",
+        "purpose": "Preference disables animations and transitions."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone-structure",
+        "value": "680px"
+      },
+      {
+        "name": "winku-mobile-overrides",
+        "value": "720px"
+      },
+      {
+        "name": "compact-sidebar",
+        "value": "900px"
+      },
+      {
+        "name": "grid-collapse",
+        "value": "1180px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Button primary",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Implemented action with a 48px minimum target.",
+      "html": "<button class=\"ds-button-primary\">去开启</button>",
+      "css": ".ds-button-primary{font-family:var(--font,Roboto,\"Noto Sans CJK SC\",sans-serif);font-size:13px;font-weight:600;background:#0B6E3B;color:#FFFFFF;border:1px solid transparent;border-radius:10px;padding:9px 15px;min-height:48px;transition:transform .15s,background .18s}.ds-button-primary:hover{transform:translateY(-1px);}.ds-button-primary:active{transform:translateY(0)}.ds-button-primary:focus-visible{outline:2px solid var(--accent-2,#0B6E3B);outline-offset:3px}@media(prefers-reduced-motion:reduce){.ds-button-primary{transition:none}}"
+    },
+    {
+      "name": "Button secondary",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Implemented action with a 48px minimum target.",
+      "html": "<button class=\"ds-button-secondary\">去设置</button>",
+      "css": ".ds-button-secondary{font-family:var(--font,Roboto,\"Noto Sans CJK SC\",sans-serif);font-size:13px;font-weight:600;background:var(--surface-2,#F0F0F4);color:var(--text-2,#55555E);border:1px solid var(--line-strong,rgba(23,23,26,.18));border-radius:10px;padding:9px 15px;min-height:48px;transition:transform .15s,background .18s}.ds-button-secondary:hover{transform:translateY(-1px);}.ds-button-secondary:active{transform:translateY(0)}.ds-button-secondary:focus-visible{outline:2px solid var(--accent-2,#0B6E3B);outline-offset:3px}@media(prefers-reduced-motion:reduce){.ds-button-secondary{transition:none}}"
+    },
+    {
+      "name": "Button ghost",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Implemented action with a 48px minimum target.",
+      "html": "<button class=\"ds-button-ghost\">忽略</button>",
+      "css": ".ds-button-ghost{font-family:var(--font,Roboto,\"Noto Sans CJK SC\",sans-serif);font-size:13px;font-weight:600;background:transparent;color:var(--text-2,#55555E);border:1px solid transparent;border-radius:10px;padding:9px 15px;min-height:48px;transition:transform .15s,background .18s}.ds-button-ghost:hover{transform:translateY(-1px);background:var(--surface-2,#F0F0F4);}.ds-button-ghost:active{transform:translateY(0)}.ds-button-ghost:focus-visible{outline:2px solid var(--accent-2,#0B6E3B);outline-offset:3px}@media(prefers-reduced-motion:reduce){.ds-button-ghost{transition:none}}"
+    },
+    {
+      "name": "Automation field",
+      "kind": "input",
+      "refersTo": "input-automation",
+      "description": "Package-name setting from automation details.",
+      "html": "<label class=\"ds-label\" for=\"ds-package\">其他平台包名</label><input class=\"ds-input\" id=\"ds-package\" placeholder=\"例如：com.example.wallet\">",
+      "css": ".ds-label{font-family:var(--font,Roboto,\"Noto Sans CJK SC\",sans-serif);display:block;margin:14px 0 6px;color:var(--text,#17171A)}.ds-input{font-family:var(--font,Roboto,\"Noto Sans CJK SC\",sans-serif);width:100%;min-height:48px;padding:10px 12px;border:1px solid var(--line-strong,rgba(23,23,26,.18));border-radius:10px;background:var(--surface,#FFF);color:var(--text,#17171A)}.ds-input::placeholder{color:var(--muted,#666670);opacity:1}.ds-input:hover{border-color:var(--line-strong,rgba(23,23,26,.18))}.ds-input:focus{border-color:color-mix(in srgb,var(--accent,#0E8A4A) 60%,var(--line,rgba(23,23,26,.09)));box-shadow:0 0 0 3px color-mix(in srgb,var(--accent,#0E8A4A) 12%,transparent)}.ds-input:focus-visible{outline:2px solid var(--accent-2,#0B6E3B);outline-offset:3px}"
+    },
+    {
+      "name": "Filter chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Ledger filter with brand-tinted selected state.",
+      "html": "<button class=\"ds-chip\" aria-pressed=\"true\">全部</button>",
+      "css": ".ds-chip{font-family:var(--font,Roboto,\"Noto Sans CJK SC\",sans-serif);font-size:12px;min-height:48px;min-width:48px;padding:6px 12px;border-radius:9px;background:var(--surface,#FFF);border:1px solid var(--line,rgba(23,23,26,.09));color:var(--text-2,#55555E)}.ds-chip:hover{color:var(--text,#17171A);border-color:var(--line-strong,rgba(23,23,26,.18))}.ds-chip[aria-pressed=true]{background:color-mix(in srgb,var(--accent,#0E8A4A) 14%,transparent);border-color:color-mix(in srgb,var(--accent,#0E8A4A) 40%,transparent);color:var(--accent,#0E8A4A);font-weight:600}.ds-chip:focus-visible{outline:2px solid var(--accent-2,#0B6E3B);outline-offset:3px}"
+    },
+    {
+      "name": "Phone card",
+      "kind": "card",
+      "refersTo": "card-mobile",
+      "description": "Flat reference-ledger container.",
+      "html": "<section class=\"ds-card\"><h3>收支趋势</h3><p>近 6 个月的收入与支出</p></section>",
+      "css": ".ds-card{font-family:var(--font,Roboto,\"Noto Sans CJK SC\",sans-serif);background:var(--surface,#FFF);color:var(--text,#17171A);border:1px solid var(--line,rgba(23,23,26,.09));border-radius:15px;padding:18px;box-shadow:none}.ds-card h3{margin:0;font-size:14px;font-weight:650;letter-spacing:-.01em}.ds-card p{margin:4px 0 0;color:var(--muted,#666670);font-size:11.5px}"
+    },
+    {
+      "name": "Selected phone destination",
+      "kind": "nav",
+      "refersTo": "navigation-active",
+      "description": "One of the five persistent destinations.",
+      "html": "<button class=\"ds-nav\" aria-current=\"page\"><svg viewBox=\"0 0 24 24\" width=\"21\" height=\"21\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\" rx=\"1.5\"/></svg><span>总览</span></button>",
+      "css": ".ds-nav{font-family:var(--font,Roboto,\"Noto Sans CJK SC\",sans-serif);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:7px 1px;min-height:64px;min-width:64px;border:0;border-radius:10px;background:var(--surface-2,#F0F0F4);color:var(--text,#17171A);font-size:11px;font-weight:600}.ds-nav svg{color:var(--accent-2,#0B6E3B)}.ds-nav:hover{background:var(--surface-2,#F0F0F4)}.ds-nav:focus-visible{outline:2px solid var(--accent-2,#0B6E3B);outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "",
+    "overview": "WinKu 小账本 applies the existing WinKu F2 identity to the user-supplied ledger. The ledger reference supplies functions and financial layouts; the WinKu theme supplies green accents on neutral light and dark surfaces. This is an Operate-mode record of the implemented system. No creative metaphor was selected in the available contract; none is introduced here.\n\nThe Android app embeds a local ledger UI alongside a native notification collector. The visual system favors compact financial information, restrained depth, local system typography, and persistent phone navigation.",
+    "keyCharacteristics": [
+      "Neutral light and dark surfaces with inherited WinKu green.",
+      "Compact ledger cards, aligned amounts, and five phone destinations.",
+      "Local fonts and SVG icons."
+    ],
+    "rules": [
+      {
+        "name": "Brand Role",
+        "body": "Preserve the inherited brand green; use the deeper action-fill role for white-text filled buttons.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do preserve the WinKu F2 brand role and the deeper filled-button role.",
+      "Do use semantic text, income, expense, warning, and surface roles in both themes.",
+      "Do maintain the established 48dp touch-target requirement and verify actual native hitboxes.",
+      "Do check scrolling, keyboard insets, and large Android font settings on native captures.",
+      "Do keep status text explicit about permission, connection, and pause state."
+    ],
+    "donts": [
+      "Don't add the entry FAB to automation, reports, or settings.",
+      "Don't replace the user-supplied ledger structure with an invented visual identity.",
+      "Don't use green alone to communicate service health or transaction direction.",
+      "Don't interpret these tokens or sample captures as full accessibility compliance."
+    ]
+  }
+}

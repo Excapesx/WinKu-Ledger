@@ -1,0 +1,1 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"><uses-permission android:name="android.permission.POST_NOTIFICATIONS"/><application android:label="通知测试夹具（仅测试机）" android:theme="@android:style/Theme.Material.Light.NoActionBar"><activity android:name="fixture.winku.notifications.Poster" android:exported="true"/></application></manifest>

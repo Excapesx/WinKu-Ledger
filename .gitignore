@@ -1,0 +1,14 @@
+.gradle/
+**/build/
+local.properties
+.signing/
+tests/classes/
+delivery/qa-ledger.db*
+delivery/source/
+delivery/*.log
+delivery/*.xml
+delivery/ledger-first.png
+delivery/ledger-auto.png
+delivery/ledger-layout.png
+delivery/inbox-review.png
+delivery/design-detect.json
